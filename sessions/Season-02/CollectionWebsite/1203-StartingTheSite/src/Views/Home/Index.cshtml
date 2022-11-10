@@ -1,0 +1,13 @@
+﻿@model IEnumerable<MyCollectionSite.Models.CollectionItem>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">My Collection</h1>
+</div>
+
+@foreach (var item in Model)
+{
+    @Html.Partial("_HatCard", item)
+}
